@@ -1,12 +1,13 @@
 var friendArr = require('../data/list.js');
 
+
 module.exports = function(app) {
     app.get('/api/friends', function(req, res) {
         res.json(friendArr);
     });
 
     app.post('/api/friends', function(req, res) {
-        var newFriendScores = req.body.scores;
+        var newFriendScores = req.body.answers;
         var scoresArr = [];
         var friendCount = 0;
         var match = 0;
@@ -15,7 +16,7 @@ module.exports = function(app) {
             var scoresDiff = 0;
 
             for(var f = 0; f < newFriendScores.length; f++) {
-                scoresDiff += (Math.abs(parseInt(friendArr[i].scores[f]) - parseInt(newFriendScores[j])));
+                scoresDiff += (Math.abs(parseInt(friendArr[i].scores[i]) - parseInt(newFriendScores[f])));
             }
             
             scoresArr.push(scoresDiff);

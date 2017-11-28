@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <title>Survey</title>
 </head>
 
@@ -33,7 +31,7 @@
                     <strong>Question 1</strong>
                 </h4>
                 <p>I am always looking ways to be creative and explore new things.</p>
-                <select data-placeholder="" class="chosen" id="q1">
+                <select data-placeholder="" class="browser-default" id="q1">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -45,7 +43,7 @@
                     <strong>Question 2</strong>
                 </h4>
                 <p>Always keep an open mind about everything.</p>
-                <select data-placeholder="" class="chosen" id="q2">
+                <select data-placeholder="" class="browser-default" id="q2">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -57,7 +55,7 @@
                     <strong>Question 3</strong>
                 </h4>
                 <p>Remain collective and cool in pressure situation</p>
-                <select data-placeholder="" class="chosen" id="q3">
+                <select data-placeholder="" class="browser-default" id="q3">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -69,7 +67,7 @@
                     <strong>Question 4</strong>
                 </h4>
                 <p>Relay more on probability then in luck.</p>
-                <select data-placeholder="" class="chosen" id="q4">
+                <select data-placeholder="" class="browser-default" id="q4">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -81,7 +79,7 @@
                     <strong>Question 5</strong>
                 </h4>
                 <p>Can be easily upset. </p>
-                <select data-placeholder="" class="chosen" id="q5">
+                <select data-placeholder="" class="browser-default" id="q5">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -93,7 +91,7 @@
                     <strong>Question 6</strong>
                 </h4>
                 <p>Great in giving advice, or being a great listener.</p>
-                <select data-placeholder="" class="chosen" id="q6">
+                <select data-placeholder="" class="browser-default" id="q6">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -105,7 +103,7 @@
                     <strong>Question 7</strong>
                 </h4>
                 <p>I am outspoken </p>
-                <select data-placeholder="" class="chosen" id="q7">
+                <select data-placeholder="" class="browser-default" id="q7">
                     <option value="">Pick which one suits you.</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -117,7 +115,7 @@
                     <strong>Question 8</strong>
                 </h4>
                 <p>Love the otdoors and having a very active lifstyle.</p>
-                <select data-placeholder="" class="chosen" id="q8">
+                <select data-placeholder="" class="browser-default" id="q8">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -129,7 +127,7 @@
                     <strong>Question 9</strong>
                 </h4>
                 <p>I see myself as a very funny person.</p>
-                <select data-placeholder="" class="chosen" id="q9">
+                <select data-placeholder="" class="browser-default" id="q9">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -141,7 +139,7 @@
                     <strong>Question 10</strong>
                 </h4>
                 <p>Love to spend my weekends coding.</p>
-                <select data-placeholder="" class="chosen" id="q10">
+                <select data-placeholder="" class="browser-default" id="q10">
                     <option value="">Pick which one suits you</option>
                     <option value="1">1 (Strongly Disagree) </option>
                     <option value="2">2</option>
@@ -150,107 +148,97 @@
                     <option value="5">5 (Strongly Agree) </option>
                 </select>
                 <br>
-                <button type="submit" class="btn" id="submit" class="waves-effect waves-light btn modal-trigger cyan lighten-1">Submit</button>
-                <hr>
-                <footer class="footer">
-                    <div class="container">
-                        <p>
-                            <a href="/api/friends">API Friends List</a> |
-                            <a href="https://github.com/CrisPortilla/FriendFinder">GitHub Repo</a>
-                        </p>
-                    </div>
-                </footer>
-            </div>
-            <div class="results" id="modal-results" role="dialog">
-                <div class="dialog">
-                    <div class="mcontent">
-                        <div class="mheader">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h2 class="modal-title">
-                                <strong>Your New Best Friend</strong>
-                            </h2>
-                        </div>
-                        <div class="modal-body">
-                            <h2 id="match-name"></h2>
-                            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
+                <button type="submit" data-target="modal1" class="waves-effect waves-light btn modal-trigger cyan lighten-1" id="submitBtn">Submit</button>
             </div>
         </div>
+        <div class="col s4">
+            <p>
+                <a href="/api/friends">API Friends List</a> |
+                <a href="https://github.com/CrisPortilla/FriendFinder">GitHub Repo</a>
+            </p>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Here's Your Match</h4>
+                <h5 id="matchName"></h5>
+                <img id="matchPic" "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="" width=2 50px>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+            </div>
+        </div>
+
+    </div>
     </div>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#submit").on("click", function(event) {
-        event.preventDefault();
-        function validateForm() {
-            var valid = true;
-            $(".form").each(function() {
-                if ($(this).val() === "") {
-                    vaild = false;
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitBtn").on("click", function (event) {
+                event.preventDefault();
+
+                function validateForm() {
+                    var valid = true;
+                    $(".form").each(function () {
+                        if ($(this).val() === "") {
+                            valid = false;
+                        }
+                    });
+
+                    $(".browser-default").each(function () {
+                        if ($(this).val() === "") {
+                            valid = false;
+                        }
+                    });
+
+                    return valid;
+                }
+
+                if (validateForm() === true) {
+                    var newFriend = {
+                        name: $("#name").val().trim(),
+                        pic: $("#photo").val().trim(),
+                        answers: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val(),
+                        ]
+                    };
+
+                    var currentURL = window.location.origin;
+
+                    $.post(currentURL + "/api/friends", newFriend, function (data) {
+                        $("#matchName").text(data.name);
+                        $("#matchPic").attr("src", data.pic);
+                    });
+
+                    $(".modal").modal();
+
+                    $("#name").val("");
+                    $("#photo").val("");
+                    $("q1").val("");
+                    $("q2").val("");
+                    $("q3").val("");
+                    $("q4").val("");
+                    $("q5").val("");
+                    $("q6").val("");
+                    $("q7").val("");
+                    $("q8").val("");
+                    $("q9").val("");
+                    $("q10").val("");
+                } else {
+                    alert("Not ALL Fields have been completeled");
                 }
             });
-
-            $(".chosen").each(function() {
-                if($(this).val() === "") {
-                    valid = false;
-                }
-            });
-
-            return vaild;
-        }
-
-        if (validateForm() === true) {
-            var newFriend = {
-                name: $("name").val().trim(),
-                photo: $("photo").val().trim(),
-                answers: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val(),
-                ]
-            };
-
-            var currentURL = window.location.origin;
-
-            $.post(currentURL + "/api/friends", newFriend, function(data) {
-                $("#bff").text(data.name);
-                $("#bffPic").attr("src", data.profilePic);
-                });
-
-                $(".results").modal();
-
-                $("#name").val("");
-                $("#photo").val("");
-                $("q1").val("");
-                $("q2").val("");
-                $("q3").val("");
-                $("q4").val("");
-                $("q5").val("");
-                $("q6").val("");
-                $("q7").val("");
-                $("q8").val("");
-                $("q9").val("");
-                $("q10").val("");
-        }
-        else {
-            alert("Not ALL Fields have been completeled");
-        }
-    });
-});
-
-</script>
+        });
+    </script>
 </body>
 
 </html>
